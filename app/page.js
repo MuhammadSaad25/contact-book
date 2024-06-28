@@ -7,7 +7,7 @@ import React from 'react'
 import { FiTrash, FiEdit } from 'react-icons/fi'
 
 const HomePage = async () => {
-  const contacts = await getContacts(); // Call the function
+  const contacts = await getContacts();
   return (
     <main>
       <HeadingText title="Contact Book" description="All Contacts Below" />
