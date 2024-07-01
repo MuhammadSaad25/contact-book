@@ -1,5 +1,6 @@
 import HeadingText from '@/components/HeadingText'
 import Navbar from '@/components/Navbar'
+import Upload from '@/components/Upload'
 import { deleteContact } from '@/lib/action'
 import { getContacts } from '@/lib/data'
 import Link from 'next/link'
@@ -11,6 +12,7 @@ const HomePage = async () => {
   return (
     <main>
       <HeadingText title="Contact Book" description="All Contacts Below" />
+      {/* <Upload/> */}
       <Navbar />
       <div className="flex flex-col px-4 py-4">
         <div>
