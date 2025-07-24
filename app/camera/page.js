@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useRef } from "react";
 
 const CameraPage = () => {
@@ -23,29 +24,29 @@ const CameraPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <h1 className="text-2xl font-bold mb-4">Welcome to Secure Video Support</h1>
+      <h1 className="text-2xl font-bold mb-4">Secure Camera Access</h1>
       {!cameraOn ? (
         <>
           <p className="mb-2 text-center">
-            This app needs access to your camera and microphone to continue.
+            This app needs camera & mic access. Please allow when asked.
           </p>
           <button
             onClick={handleStartCamera}
             className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
           >
-            Allow Camera & Mic Access
+            Allow Camera Access
           </button>
         </>
       ) : (
         <>
-          <p className="mb-2">Camera is active. You are live (not being recorded).</p>
+          <p className="mb-2">Camera is active (not being recorded).</p>
           <video
             ref={videoRef}
             autoPlay
             playsInline
             muted
             className="w-full max-w-md rounded shadow-lg"
-          ></video>
+          />
         </>
       )}
     </div>
